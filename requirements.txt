@@ -1,8 +1,9 @@
-BeautifulSoup==3.2.1
+botocore==1.4.78
 boto==2.43.0
 boto3==1.4.1
-feedgen==0.4.0
 kappa==0.6.0
 lxml==3.6.4
+feedgen==0.4.0
 requests==2.11.1
-pytz
+BeautifulSoup==3.2.1
+pytz==2016.7
