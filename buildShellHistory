@@ -1,0 +1,218 @@
+    1  sudo yum update
+    2  sudo yum install git
+    3  sudo yum install setuptools
+    4  pip
+    5  sudo pip install virtualenv
+    6  git clone https://github.com/canada4663/wrf-podcast.git
+    7  cd wrf-podcast/
+    8  virtualenv .
+    9  source bin/activate
+   10  ls
+   11  cd lib64/
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd local/
+   16  ls
+   17  cd ..
+   18  ls
+   19  ls -lart
+   20  deactivate 
+   21  sudo pip install ipython
+   22  source bin/activate
+   23  ls
+   24  sudo yum install python-devel libxml2-devel libxml2 libxslt-devel libxslt 
+   25  pip install libxml
+   26  pip install --upgrade pip
+   27  pip install lxml
+   28  cat requirements.txt 
+   29  pip install feedgen
+   30  pip install BeautifulSoup
+   31  pip install boto boto3 kappa requests
+   32  cat wrf-podcast.py 
+   33  python wrf-podcast.py 
+   34  pip install pytz
+   35  python wrf-podcast.py 
+   36  ldd
+   37  history
+   38  history > wrf-podcast-install-commands
+   39  ls
+   40  cd lib64/
+   41  ls
+   42  cd python2.7/
+   43  ls
+   44  cd site-packages/
+   45  ls
+   46  cd lxml
+   47  ls
+   48  ldd etree.so 
+   49  ldd objectify.so 
+   50  ls -lart /lib64
+   51  cd ..
+   52  ls
+   53  cd ..
+   54  ls
+   55  cd ..
+   56  ls
+   57  cd ..
+   58  ls
+   59  cd lib
+   60  ls
+   61  cd python2.7/site-packages/
+   62  ls
+   63  cd feedgen
+   64  ls
+   65  cd ext/
+   66  ls
+   67  cd ..
+   68  ls
+   69  cd ..
+   70  ls
+   71  cd ..
+   72  ls
+   73  cd ~/wrf-podcast/
+   74  ls
+   75  cd _src/
+   76  ls
+   77  cp -R ../lib/python2.7/site-packages/ .
+   78  cp -R ../lib64/python2.7/site-packages/ .
+   79  ls
+   80  cd site-packages/
+   81  ls
+   82  cd ..
+   83  ls
+   84  rm -Rf site-packages/
+   85  cp -R ../lib64/python2.7/site-packages/* .
+   86  cp -R ../lib/python2.7/site-packages/* .
+   87  ls
+   88  cd ..
+   89  ls
+   90  cat setup.sh 
+   91  cp *.py ./_src/
+   92  kappa
+   93  ls
+   94  pico kappa.yml
+   95  vim
+   96  ls
+   97  kappa
+   98  kappa deploy
+   99  kappa --debug --env prod --config kappa.yml deploy
+  100  kappa --debug --env prod deploy
+  101  vim kappa.yml 
+  102  kappa --debug --env prod deploy
+  103  vim kappa.yml 
+  104  env
+  105  aws s3 ls
+  106  ls ~/.aws
+  107  kappa --debug --env prod deploy
+  108  aws 
+  109  aws help
+  110  aws configure
+  111  kappa --debug --env prod deploy
+  112  vim kappa.yml 
+  113  kappa --debug --env prod deploy
+  114  cat ~/.aws
+  115  cd ~
+  116  ls -lart
+  117  ipython
+  118  pwd
+  119  cd wrf-podcast/
+  120  aws iam
+  121  aws iam list-users
+  122  curl http://169.254.169.254/latest/meta-data/iam/security-credentials/s3access
+  123  zip -9 wrfpodcast.zip
+  124  ls
+  125  cd _src/
+  126  ls
+  127  zip -r9 ../wrfpodcast.zip *
+  128  cd ..
+  129  ls
+  130  ls -lart
+  131  ls -larth
+  132  aws lambda
+  133  aws lambda ls
+  134  aws lambda list-functions
+  135  aws lambda list-functions --region us-west-2
+  136  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrfpodcast.zip
+  137  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrfpodcast.zip --region us-west-2
+  138  ls _src
+  139  cat wrf-podcast
+  140  cd _src
+  141  ls
+  142  cd wrf-podcast.py 
+  143  cat wrf-podcast.py 
+  144  ls
+  145  cd ..
+  146  ls
+  147  unzip -l wrfpodcast.zip 
+  148  mv wrfpodcast.zip wrf-podcast.zip
+  149  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrf-podcast.zip --region us-west-2
+  150  ls
+  151  vim wrf-podcast.py 
+  152  cp wrf-podcast.py _src/
+  153  rm wrf-podcast.zip
+  154  zip -r9 wrf-podcast.zip ./_src/*
+  155  unzip ls wrf-podcast.zip 
+  156  unzip -l wrf-podcast.zip 
+  157  cd ..
+  158  ls
+  159  cd wrf-podcast/
+  160  rm wrf-podcast.zip 
+  161  cd _src/
+  162  zip -r9 ../wrf-podcast.zip *
+  163  ls
+  164  rm -Rf boto* pip*
+  165  rm ../wrf-podcast.zip 
+  166  zip -r9 ../wrf-podcast.zip *
+  167  unzip -l ../wrf-podcast.zip 
+  168  cd ..
+  169  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrf-podcast.zip --region us-west-2
+  170  pip install boto
+  171  cd lib/python2.7/site-packages/
+  172  cp -Rf boto ~/wrf-podcast/_src/
+  173  cd ../..
+  174  ls
+  175  cd ..
+  176  ls
+  177  cd lib/python2.7/site-packages/
+  178  rm ~/wrf-podcast/wrf-podcast.zip 
+  179  zip -r9 ~/wrf-podcast/wrf-podcast.zip *
+  180  cd ../../..
+  181  ls
+  182  zip -r9 wrf-podcast.zip wrf-podcast.py
+  183  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrf-podcast.zip --region us-west-2
+  184  deactivate 
+  185  cd _src/
+  186  ipython
+  187  ls
+  188  cd ..
+  189  ls
+  190  mv wrf-podcast.py wrfpodcast.py
+  191  cd lib/python2.7/site-packages/
+  192  ls
+  193  zip -r9 ~/wrf-podcast/wrfpodcast.zip *
+  194  cd ../../..
+  195  cd lib64/python2.7/site-packages/
+  196  zip -r9 ~/wrf-podcast/wrfpodcast.zip *
+  197  cd ../../..
+  198  zip -r9 wrfpodcast.zip wrfpodcast.py
+  199  unzip -l wrfpodcast.zip 
+  200  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrfpodcast.zip --region us-west-2
+  201  vim wrfpodcast.py 
+  202  python wrfpodcast.py 
+  203  pwd
+  204  ls _src
+  205  source bin/activate
+  206  python wrfpodcast.py 
+  207  vim wrfpodcast.py 
+  208  python wrfpodcast.py 
+  209  vim wrfpodcast.py 
+  210  ipython
+  211  python -d wrfpodcast.py
+  212  git pull
+  213  rm wrfpodcast.py
+  214  git pull
+  215  ls
+  216  zip -r9 wrfpodcast.zip wrfpodcast.py
+  217  aws lambda update-function-code --function-name wrf-podcast --zip-file fileb://wrfpodcast.zip --region us-west-2
+  218  history > buildShellHistory

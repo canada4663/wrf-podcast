@@ -1,0 +1,27 @@
+me: wrf-podcast-cron
+environments:
+  prod:
+    profile: default
+    region: us-west-2
+    policy:
+      iam:
+        # In this case, we are using an existing managed policy so we just
+        # need to put the name of that policy here.
+        policy:
+          name: AWSLambdaExecute
+          name: AmazonS3FullAccess
+        # The name of the IAM role used for executing the Lambda function.
+        # The policy listed above will be attached to this role once it is created.
+        role:
+          name: wrf-autogen
+    event_sources:
+      - arn: arn:aws:events:us-west-2:519095122095:rule/wrf-podcast-cron
+        schedule: cron(0 0 ? * MON-FRI *)
+        description: run autogen script everynight at midnight UTC
+        enabled: true
+lambda:
+  description: Run WRF RSS Generator script nightly during week
+  handler: wrfpodcast.autogen
+  runtime: python2.7
+  memory_size: 128
+  timeout: 240
