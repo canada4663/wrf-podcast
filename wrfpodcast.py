@@ -6,6 +6,11 @@ import pytz
 import boto
 central_tz = pytz.timezone('US/Central')
 WRF_WEBSITE = "http://www.whiterock.org/sermons/"
+WRF_LOGO = "https://s3-us-west-1.amazonaws.com/wrf-autogen/wrf-logo.png"
+WRF_DESCRIPTION="Sermons from Sunday mornings at White Rock Fellowship. White\
+Rock Fellowship is a community of Christians in East Dallas, Texas who seek to\
+declare and demonstrate the gospel through lives of worship, community and\
+mission."
 
 def print_enc(s):
 	'''Print function compatible with both python2 and python3 accepting strings
@@ -18,8 +23,8 @@ def autogen(*args):
     feed = FeedGenerator()
     feed.id('http://www.whiterock.org/sermons/')
     feed.title('White Rock Fellowship Sermon Podcast')
-    feed.description("Sunday Sermons from White Rock Fellowship Dallas")
-    feed.link( href='localhost', rel='self')
+    feed.description(WRF_DESCRIPTION)
+    feed.link(href='https://s3-us-west-1.amazonaws.com/wrf-autogen/wrf-podcast.rss')
     feed.language('en-US')
 
     user_agent = {'User-agent': 'Mozilla/5.0'}
@@ -33,9 +38,9 @@ def autogen(*args):
     feed.podcast.itunes_author('White Rock Fellowship')
     feed.podcast.itunes_explicit('no')
     feed.podcast.itunes_owner('Ryan Hoium', 'ryanhoium@gmail.com')
-    feed.podcast.itunes_summary('Sunday Sermons from White Rock Fellowship Dallas')
+    feed.podcast.itunes_summary(WRF_DESCRIPTION)
     feed.podcast.itunes_subtitle('White Rock Fellowship Sermon Podcast')
-    feed.podcast.itunes_image('http://www.whiterock.org/wp-content/uploads/2015/05/Logo_Web-Header-e1406239129390.png')
+    feed.podcast.itunes_image(WRF_LOGO)
 
     series_pagelinks =[]
     series_sidebar = soup.find('div', {'id':'custom_category-2'})
