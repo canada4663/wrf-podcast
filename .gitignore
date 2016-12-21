@@ -1,0 +1,9 @@
+*.rss
+*.pyc
+*.swp
+*.xcf
+.Python
+pip-selfcheck.json
+rss-server.py
+wrf-podcast.zip
+.kappa/
